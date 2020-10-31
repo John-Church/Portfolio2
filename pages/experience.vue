@@ -5,34 +5,59 @@
       <div>  
         <p class="text-2xl text-white font-bold">
           Education
+        <span>
+          <button @click="educationToggle = !educationToggle" class="text-white text-sm mx-2 p-1">
+            <svg width="18" height="17" class="antialiased">
+              <polyline points="
+                2 10
+                8 16
+                16 10
+              "></polyline>
+            </svg>
+          </button>
+        </span>
         </p>
         <div class="border-white border w-full pl-4"></div>
       </div>
 
-      <div v-for="(item) in Education" :key="item" class="clear-left">
-          <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
-            {{ item.title }}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
-          </p>
-          <p class="text-gray-100 antialiased italic mt-2 float-right">
-            {{ item.startDate + " " + item.endDate }}
-          </p>
-          <p class="text-gray-100 antialiased italic clear-left text-sm">
-            {{ item.subscript }}
-          </p>
-          <ul class="list-disc ml-8">
-            <li v-for="(content) in item.content" :key="content" class="text-gray-100 antialiased text-sm">
-              {{ content }}
-            </li>
-          </ul>
+      <div v-if="educationToggle">
+        <div v-for="(item) in Education" :key="item" class="clear-left">
+            <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
+              {{ item.title }}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
+            </p>
+            <p class="text-gray-100 antialiased italic mt-2 float-right">
+              {{ item.startDate + " " + item.endDate }}
+            </p>
+            <p class="text-gray-100 antialiased italic clear-left text-sm">
+              {{ item.subscript }}
+            </p>
+            <ul class="list-disc ml-8">
+              <li v-for="(content) in item.content" :key="content" class="text-gray-100 antialiased text-sm">
+                {{ content }}
+              </li>
+            </ul>
+        </div>
       </div>
 
       <div class="pt-4">  
         <p class="text-2xl text-white font-bold">
           Experience
+          <span>
+          <button @click="experienceToggle = !experienceToggle" class="text-white text-sm mx-2 p-1">
+            <svg width="18" height="17" class="antialiased">
+              <polyline points="
+                2 10
+                8 16
+                16 10
+              "></polyline>
+            </svg>
+          </button>
+        </span>
         </p>
         <div class="border-white border w-full pl-4"></div>
       </div>
 
+      <div v-if="experienceToggle">
       <div v-for="(item) in Experience" :key="item" class="clear-left">
           <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
             {{ item.title}}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
@@ -56,14 +81,27 @@
             </div>
           </ul>
       </div>
+      </div>
 
       <div class="pt-4">  
         <p class="text-2xl text-white font-bold">
           Leadership
+          <span>
+          <button @click="leadershipToggle = !leadershipToggle" class="text-white text-sm mx-2 p-1">
+            <svg width="18" height="17" class="antialiased">
+              <polyline points="
+                2 10
+                8 16
+                16 10
+              "></polyline>
+            </svg>
+          </button>
+        </span>
         </p>
         <div class="border-white border w-full pl-4"></div>
       </div>
 
+    <div v-if="leadershipToggle">
     <div v-for="(item) in Leadership" :key="item" class="clear-left">
         <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
           {{ item.title}}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
@@ -80,6 +118,9 @@
           </li>
         </ul>
       </div>
+    </div>
+
+
       <div class="pt-4">  
         <p class="text-2xl text-white font-bold">
           Skills
@@ -87,27 +128,30 @@
         <div class="border-white border w-full pl-4"></div>
       </div>
 
-    <div v-for="(item) in Leadership" :key="item" class="clear-left">
-        <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
-          {{ item.title}}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
-        </p>
-        <p class="text-gray-100 antialiased italic mt-2 float-right">
-          {{ item.startDate + " " + item.endDate }}
-        </p>
-        <p class="text-gray-100 antialiased italic clear-left text-sm">
-          {{ item.subscript }}
-        </p>
-        <ul v-if="item.content != undefined && item.content.length != 0" class="float-left list-disc ml-8">
-          <li v-for="(content) in item.content" :key="content" class="text-gray-100 antialiased text-sm">
-            {{ content }}
-          </li>
-        </ul>
+<div class="flex flex-wrap">
+      <div v-for="(toggle) in Toggles" :key='toggle.name'>
+        <button 
+        @click="toggle.value = !toggle.value" 
+        :class="{ 'bg-gray-100 text-blue-900 border-blue-900': toggle.value}"
+        class="font-medium mr-2 tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1"
+        >
+        {{ toggle.name }}
+        </button>
       </div>
+</div>
+
+    <div class="h-auto lg:h-48">
+      <div class="flex flex-wrap mt-4">
+        <div v-for="(item) in SkillsList" :key="item" class="text-gray-100 antialiased m-1 p-1 border border-white">
+            {{ item }} 
+          </div>
+      </div>
+    </div>
 
     </div>
 
     <!-- buffer -->
-    <div class="h-24 w-full"></div>
+    <div class="h-48 w-full"></div>
 
 </div>
 </template>
@@ -117,17 +161,7 @@ import nuxtConfig from '~/nuxt.config'
 export default {
   data() {
     return {
-    Toggles:
-    {
-      computerLanguages: true,
-      frameworks: true,
-      frontend: true,
-      backend: true,
-      softSkills: true,
-      projectManagement: true,
-      languages: true,
-    },
-
+    educationToggle: true,
     Education: 
     [
       {
@@ -137,13 +171,12 @@ export default {
         endDate: 'May 2020',
         subscript: 'Bachelor of Arts in Philosophy with a Sequence in Computer Science',
         content: [
-          'GPA: 3.6/4.0',
           'Awards: McKenna Scholar (2017), Appel Fellow (2018), Summit Fellow (2019), 1st Place Gould Humanities Competition (2020)',
           'Relevant Coursework: Principles of Computer Science, Data Structures, Computer Networking, Discrete Math, Graphing Algorithms, Ethics, Psychology and Philosophy of Bias in Research',
         ]
       },
     ],
-
+    experienceToggle: true,
     Experience: 
     [
       {
@@ -224,7 +257,7 @@ export default {
         ]
       },
     ],
-
+    leadershipToggle: true,
     Leadership: 
     [
       {
@@ -256,75 +289,116 @@ export default {
       },
     ],
 
-    SkillsAndInterests: 
+  Toggles:
     {
-      skills:
-        {
-          codingLanguages: 
-          [
-            'Python',
-            'Java',
-            'C++',
-            'Javascript',
+      // projectManagement: {
+      //   name: 'Project Management', 
+      //   value: false,
+      //   content:
+      //   []
+      //   },
+      computerLanguages: {
+        name: 'Computer Languages', 
+        value: false,
+        content:
+        [
             'CSS',
+            'C++',
             'HTML',
+            'Java',
+            'Javascript',
+            'Python',
             'SQL',
           ],
-          frameworks: 
-          [
+        },
+      frameworks: {
+        name: 'Frameworks', 
+        value: false,
+        content:
+        [
+            'Bootstrap',
             'Django',
             'Flask',
-            'Vue',
             'Nuxt',
             'Tailwind',
-            'Bootstrap',
+            'Vue',
           ],
-          computerScience:
-          [
+        },
+      computerscience: {
+        name: 'Computer Science', 
+        value: false,
+        content:
+        [
             'Algorithms',
             'Computer Networking',
             'Data Structures',
+            'Database Design',
             'Graphing Algorithms',
             'JAMstack',
-            'Database Design',
           ],
-          softSkills:
-          [
-            'Public Speaking',
-            'Project Management',
-          ],
-          design:
-          [
-            'Photoshop',
-            'Illustrator',
+        },
+      // frontend: {
+      //   name: 'Frontend', 
+      //   value: false,
+      //   content:
+      //   []
+      //   },
+      // backend: {
+      //   name: 'Backend', 
+      //   value: false,
+      //   content:
+      //   []
+      //   },
+      design: {
+        name: 'Design', 
+        value: false,
+        content:
+        [
             'InDesign',
+            'Illustrator',
+            'Photoshop',
             'Web Design',
           ],
-          misc:
-          [
-            'Excel',
-            'PostgreSQL',
-          ],
-
         },
-      languages:
+      languages: {
+        name: 'Languages', 
+        value: false,
+        content:
         [
+          'Arabic (MS, intermediate)',
           'English (native)',
           'French (working proficiency)',
-          'Arabic (MS, intermediate)',
           'Latin (basic translation)',
         ],
-      interests:
+        },
+      softSkills: {
+        name: 'Soft Skills', 
+        value: false,
+        content:
         [
+            'Project Management',
+            'Public Speaking',
+          ],
+        },
+      misc: {
+        name: 'Misc.', 
+        value: false,
+        content:
+        [
+            'Excel',
+            'PostgreSQL',
+        ],
+        },
+    },
+    Interests: 
+        [
+          'classics',
           'hiking',
           'typography',
-          'watercolor painting',
           'music (mostly Alternative)',
           'running',
-          'classics',
+          'watercolor painting',
         ],
-    }
-
   }
 },
   computed: {
@@ -334,9 +408,33 @@ export default {
       return this.message.split('').reverse().join('')
     },
     SkillsList: function () {
-      // `this` points to the vm instance
-      return this.message.split('').reverse().join('')
+      var L = []
+      var L2 = []
+      console.log("hello")
+      for (var t in this.Toggles) {
+        console.log(this.Toggles[t].name)
+        if (this.Toggles[t].value == true) {
+          for (var i of this.Toggles[t].content) {
+            if (!L.includes(i)) {
+              L.push(i)
+            }
+          } 
+          } else {
+          for (var i of this.Toggles[t].content) {
+            if (!L2.includes(i)) {
+              L2.push(i)
+            }
+          }
+        }
+      }
+      if (L.length == 0) {
+        return L2
+      } else {
+        return L
+      }
     },
+  },
+  methods: {
   },
 }
 </script>
@@ -384,5 +482,13 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+svg {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+  /* stroke-linecap: round;
+  stroke-linejoin: round; */
+  fill: none;
 }
 </style>

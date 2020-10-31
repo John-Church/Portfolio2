@@ -1,12 +1,17 @@
 <template>
-<div class="">
-    <div class="w-1/3 mx-auto mt-16">
-    <p class="text-gray-100 antialiased text-xl">
-      Claremont Mckenna College
-    </p>
+<div class="min-h-screen">
+    <div class="w-screen px-8 xl:w-2/3 mx-auto mt-16">
     <p class="text-gray-100 antialiased text-lg mt-2">
-      My name is John Church. I'm a student of philosophy and computer science currently attending Claremont Mckenna College in Southern California. 
+      My name is John Church. I'm a student of philosophy and computer science currently attending Claremont Mckenna College in Southern California.
     </p>
+   <div class="flex flex-wrap">
+      <img src="/photos/823FBF1A-DFDE-4E8B-AB0C-34B62D322C31_1_105_c.jpeg" alt="">
+      <img src="/photos/131192FF-AE11-4514-9A0F-D8E6BB13EC4A_1_105_c.jpeg" alt="">
+      <img src="/photos/508791A7-0871-4ECE-A31C-4B51C28EAC2A_1_105_c.jpeg" alt="">
+      <img src="/photos/A5F43326-0DB4-4A8D-A06E-B0A722357559_1_105_c.jpeg" alt="">
+      <img src="/photos/E8F927EE-A542-45DE-BEC1-3191F22DCBDA_1_105_c.jpeg" alt="">
+   </div>
+
     </div>
 </div>
 </template>

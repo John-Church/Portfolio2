@@ -8,8 +8,8 @@
     </a>
       <ul class="flex items-center hidden space-x-8 lg:flex">
         <ul class="flex items-center hidden space-x-8 lg:flex">
-      <li><nuxt-link to="/portfolio" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1">Portfolio</nuxt-link></li>
       <li><nuxt-link to="/experience" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1">Experience</nuxt-link></li>
+      <li><nuxt-link to="/portfolio" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1">Portfolio</nuxt-link></li>
       <li><nuxt-link to="/about" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1">About Me</nuxt-link></li>
     </ul>
       </ul>
@@ -113,7 +113,15 @@ export default {
 .NuxtLogo {
   animation: 1s appear;
   margin: auto;
+};
+.nuxt-link-active {
+    @apply bg-gray-100 text-blue-900 border-blue-900
 }
+.nuxt-link-exact-active {
+    @apply bg-gray-100 text-blue-900 border-blue-900
+}
+
+
 
 @keyframes appear {
   0% {

@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="min-h-screen">
     <div class="w-1/3 mx-auto mt-16">
       <p class="text-gray-100 antialiased text-xl">
         Claremont Mckenna College
