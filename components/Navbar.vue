@@ -3,14 +3,14 @@
     class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 antialiased"
   >
     <div class="relative flex items-center justify-between">
-      <a href="/" aria-label="John Church" title="John Church" class="inline-flex items-center">
-      <span class="ml-2 text-xl tracking-wide text-gray-100">John Church</span>
-    </a>
+      <nuxt-link to="/" aria-label="John Church" title="John Church" class="inline-flex items-center">
+      <span class="text-xl tracking-wide text-blue-900 bg-white transition-colors">John Church</span>
+      </nuxt-link>
       <ul class="flex items-center hidden space-x-8 lg:flex">
         <ul class="flex items-center hidden space-x-8 lg:flex">
-      <li><nuxt-link to="/experience" aria-label="Experience" title="Experience" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1">Experience</nuxt-link></li>
-      <li><nuxt-link to="/about" aria-label="About" title="About" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1">About Me</nuxt-link></li>
-      <li><nuxt-link to="/contact" aria-label="Contact" title="Contact" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1">Contact</nuxt-link></li>
+      <li><nuxt-link to="/experience" aria-label="Experience" title="Experience" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1">Experience</nuxt-link></li>
+      <li><nuxt-link to="/about" aria-label="About" title="About" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1">About Me</nuxt-link></li>
+      <li><nuxt-link to="/contact" aria-label="Contact" title="Contact" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1">Contact</nuxt-link></li>
     </ul>
       </ul>
       <div class="lg:hidden">
@@ -60,7 +60,7 @@
                     href="/"
                     aria-label="Our product"
                     title="Our product"
-                    class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
                     >Product</a
                   >
                 </li>
@@ -69,7 +69,7 @@
                     href="/"
                     aria-label="Our product"
                     title="Our product"
-                    class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
                     >Features</a
                   >
                 </li>
@@ -78,7 +78,7 @@
                     href="/"
                     aria-label="Product pricing"
                     title="Product pricing"
-                    class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
                     >Pricing</a
                   >
                 </li>
@@ -87,7 +87,7 @@
                     href="/"
                     aria-label="About us"
                     title="About us"
-                    class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:text-deep-purple-accent-400"
                     >About us</a
                   >
                 </li>
@@ -115,10 +115,10 @@ export default {
   margin: auto;
 };
 .nuxt-link-active {
-    @apply bg-gray-100 text-blue-900 border-blue-900
+    @apply bg-blue-900 text-white border-blue-900
 }
 .nuxt-link-exact-active {
-    @apply bg-gray-100 text-blue-900 border-blue-900
+    @apply bg-blue-900 text-white border-blue-900
 }
 
 

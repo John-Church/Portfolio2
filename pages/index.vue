@@ -1,8 +1,8 @@
 <template>
     <div class="min-h-screen">
 
-      <div class="antialiased text-white w-screen px-8 xl:w-2/3 mx-auto mt-16">
-        <nuxt-content :document="coverLetter" />
+      <div class="antialiased text-blue-900 w-screen px-8 xl:w-2/3 mx-auto mt-16">
+        <nuxt-content :document="intro" />
       </div>
 
     </div>
@@ -15,9 +15,9 @@ export default {
     }
   },
   async asyncData({ $content, params }) {
-    const coverLetter = await $content('coverLetter').fetch()
+    const intro = await $content('intro').fetch()
 
-    return { coverLetter }
+    return { intro }
   },
 }
 </script>
@@ -28,9 +28,11 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-p {
-  @apply mb-4
+.nuxt-content p {
+  @apply mb-4;
+  text-indent: 32px;
 }
+
 
 .layout-enter-active, .layout-leave-active {
   transition: opacity .5s
