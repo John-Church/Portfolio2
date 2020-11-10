@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-900 h-full min-h-screen">
+  <div class="bg-white h-full min-h-screen">
     <Navbar></Navbar>
     <Nuxt />
   </div>
@@ -7,6 +7,15 @@
 
 <style>
 @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
 
 /* 
   .home-enter-active, .home-leave-active { animation: fadeInRight .5s; }

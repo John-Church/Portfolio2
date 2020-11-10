@@ -3,73 +3,66 @@
     <div class="w-screen px-8 xl:w-2/3 mx-auto mt-16">
     
       <div>  
-        <p class="text-2xl text-white font-bold">
+        <p class="text-2xl text-blue-900 font-bold">
           Education
-        <span>
-          <button @click="educationToggle = !educationToggle" class="text-white text-sm mx-2 p-1">
-            <svg width="18" height="17" class="antialiased">
-              <polyline points="
-                2 10
-                8 16
-                16 10
-              "></polyline>
+          <button @click="educationToggle = !educationToggle" class="relative p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+              <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
-        </span>
         </p>
-        <div class="border-white border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4"></div>
       </div>
 
-      <div v-if="educationToggle">
-        <div v-for="(item) in Education" :key="item" class="clear-left">
-            <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
-              {{ item.title }}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
-            </p>
-            <p class="text-gray-100 antialiased italic mt-2 float-right">
-              {{ item.startDate + " " + item.endDate }}
-            </p>
-            <p class="text-gray-100 antialiased italic clear-left text-sm">
-              {{ item.subscript }}
-            </p>
-            <ul class="list-disc ml-8">
-              <li v-for="(content) in item.content" :key="content" class="text-gray-100 antialiased text-sm">
-                {{ content }}
-              </li>
-            </ul>
+
+      <transition>
+        <div v-if="educationToggle">
+          <div v-for="(item) in Education" :key="item" class="clear-left">
+              <p class="text-blue-900 antialiased text-lg mt-2 float-left font-bold">
+                {{ item.title }}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
+              </p>
+              <p class="text-blue-900 antialiased italic mt-2 float-right">
+                {{ item.startDate + " " + item.endDate }}
+              </p>
+              <p class="text-blue-900 antialiased italic clear-left text-sm">
+                {{ item.subscript }}
+              </p>
+              <ul class="list-disc ml-8">
+                <li v-for="(content) in item.content" :key="content" class="text-blue-900 antialiased text-sm">
+                  {{ content }}
+                </li>
+              </ul>
+          </div>
         </div>
-      </div>
+      </transition>
 
       <div class="pt-4">  
-        <p class="text-2xl text-white font-bold">
+        <p class="text-2xl text-blue-900 font-bold">
           Experience
           <span>
-          <button @click="experienceToggle = !experienceToggle" class="text-white text-sm mx-2 p-1">
-            <svg width="18" height="17" class="antialiased">
-              <polyline points="
-                2 10
-                8 16
-                16 10
-              "></polyline>
+          <button @click="experienceToggle = !experienceToggle" class="relative p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+              <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </span>
         </p>
-        <div class="border-white border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4"></div>
       </div>
 
       <div v-if="experienceToggle">
       <div v-for="(item) in Experience" :key="item" class="clear-left">
-          <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
+          <p class="text-blue-900 antialiased text-lg mt-2 float-left font-bold">
             {{ item.title}}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
           </p>
-          <p class="text-gray-100 antialiased italic mt-2 float-right">
+          <p class="text-blue-900 antialiased italic mt-2 float-right">
             {{ item.startDate + " " + item.endDate }}
           </p>
-          <p class="text-gray-100 antialiased italic clear-left text-sm">
+          <p class="text-blue-900 antialiased italic clear-left text-sm">
             {{ item.subscript }}
           </p>
           <ul class="list-disc ml-8">
-            <div v-for="(content) in item.content" :key="content" class="text-gray-100 antialiased text-sm">
+            <div v-for="(content) in item.content" :key="content" class="text-blue-900 antialiased text-sm">
               <div v-if="Array.isArray(content)">
                 <ul class="list-disc ml-8">
                   <li v-for="subitem in content" :key="subitem" class="">
@@ -84,36 +77,32 @@
       </div>
 
       <div class="pt-4">  
-        <p class="text-2xl text-white font-bold">
+        <p class="text-2xl text-blue-900 font-bold">
           Leadership
           <span>
-          <button @click="leadershipToggle = !leadershipToggle" class="text-white text-sm mx-2 p-1">
-            <svg width="18" height="17" class="antialiased">
-              <polyline points="
-                2 10
-                8 16
-                16 10
-              "></polyline>
+          <button @click="leadershipToggle = !leadershipToggle" class="relative p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+              <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </span>
         </p>
-        <div class="border-white border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4"></div>
       </div>
 
     <div v-if="leadershipToggle">
     <div v-for="(item) in Leadership" :key="item" class="clear-left">
-        <p class="text-gray-100 antialiased text-lg mt-2 float-left font-bold">
+        <p class="text-blue-900 antialiased text-lg mt-2 float-left font-bold">
           {{ item.title}}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
         </p>
-        <p class="text-gray-100 antialiased italic mt-2 float-right">
+        <p class="text-blue-900 antialiased italic mt-2 float-right">
           {{ item.startDate + " " + item.endDate }}
         </p>
-        <p class="text-gray-100 antialiased italic clear-left text-sm">
+        <p class="text-blue-900 antialiased italic clear-left text-sm">
           {{ item.subscript }}
         </p>
         <ul v-if="item.content != undefined && item.content.length != 0" class="float-left list-disc ml-8">
-          <li v-for="(content) in item.content" :key="content" class="text-gray-100 antialiased text-sm">
+          <li v-for="(content) in item.content" :key="content" class="text-blue-900 antialiased text-sm">
             {{ content }}
           </li>
         </ul>
@@ -122,18 +111,18 @@
 
 
       <div class="pt-4">  
-        <p class="text-2xl text-white font-bold">
+        <p class="text-2xl text-blue-900 font-bold">
           Skills
         </p>
-        <div class="border-white border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4"></div>
       </div>
 
 <div class="flex flex-wrap">
       <div v-for="(toggle) in Toggles" :key='toggle.name'>
         <button 
         @click="toggle.value = !toggle.value" 
-        :class="{ 'bg-gray-100 text-blue-900 border-blue-900': toggle.value}"
-        class="font-medium mr-2 tracking-wide text-gray-100 transition-colors duration-200 hover:bg-gray-100 hover:text-blue-900 hover:border-blue-900 border-b font-extralight border-gray-100 p-1"
+        :class="{ 'text-white bg-blue-900 border-blue-900': toggle.value}"
+        class="font-medium mr-2 tracking-wide transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-blue-900 border-b font-extralight border-blue-900 p-1"
         >
         {{ toggle.name }}
         </button>
@@ -142,7 +131,7 @@
 
     <div class="h-auto lg:h-48">
       <div class="flex flex-wrap mt-4">
-        <div v-for="(item) in SkillsList" :key="item" class="text-gray-100 antialiased m-1 p-1 border border-white">
+        <div v-for="(item) in SkillsList" :key="item" class="text-blue-900 antialiased m-1 p-1 border border-blue-900">
             {{ item }} 
           </div>
       </div>

@@ -1,5 +1,5 @@
 My name is John Church, an undergraduate student graduating from Claremont Mckenna College this spring. During my time in college I have studied computer science, philosophy and Arabic. I have been the 
-director in Internal Affairs on the top model UN team on the west coast, the executive officer for a newspaper, and the principal developer for a real estate fintech startup. In short, I believe that the best education is an interdisciplinary one. I bring a wide variety of experiences and skills to any project that I work on. 
+director in Internal Affairs on the top model UN team on the West Coast, the executive officer for a newspaper, and the principal developer for a real estate fintech startup. In short, I believe that the best education is an interdisciplinary one. I bring a wide variety of experiences and skills to any project that I work on. 
 
 My coursework has included data structures, discrete mathematics, graphing algorithms and computer networking. My work in discrete mathematics has included an extended segment on encryption theory. Through my philosophy classes, I have trained to accurately construct and deconstruct arguments and to organize my thoughts. I have found that my training in philosophy has had a profound impact on my ability to organize work as well as my capacity to make logical decisions generally.
 
