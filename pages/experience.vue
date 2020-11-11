@@ -36,6 +36,34 @@
         </div>
       </transition>
 
+
+      <div class="pt-4">  
+        <p class="text-2xl text-blue-900 font-bold">
+          Skills
+        </p>
+        <div class="border-blue-900 border w-full pl-4"></div>
+      </div>
+
+<div class="flex flex-wrap">
+      <div v-for="(toggle) in Toggles" :key='toggle.name'>
+        <button 
+        @click="toggle.value = !toggle.value" 
+        :class="{ 'text-white bg-blue-900 border-blue-900': toggle.value}"
+        class="font-medium mr-2 tracking-wide transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-blue-900 border-b font-extralight border-blue-900 p-1 px-3"
+        >
+        {{ toggle.name }}
+        </button>
+      </div>
+</div>
+
+    <div class="h-auto">
+      <div class="flex flex-wrap mt-4">
+        <div v-for="(item) in SkillsList" :key="item" class="text-blue-900 antialiased m-1 p-1 border border-blue-900">
+            {{ item }} 
+          </div>
+      </div>
+    </div>
+
       <div class="pt-4">  
         <p class="text-2xl text-blue-900 font-bold">
           Experience
@@ -106,34 +134,6 @@
             {{ content }}
           </li>
         </ul>
-      </div>
-    </div>
-
-
-      <div class="pt-4">  
-        <p class="text-2xl text-blue-900 font-bold">
-          Skills
-        </p>
-        <div class="border-blue-900 border w-full pl-4"></div>
-      </div>
-
-<div class="flex flex-wrap">
-      <div v-for="(toggle) in Toggles" :key='toggle.name'>
-        <button 
-        @click="toggle.value = !toggle.value" 
-        :class="{ 'text-white bg-blue-900 border-blue-900': toggle.value}"
-        class="font-medium mr-2 tracking-wide transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-blue-900 border-b font-extralight border-blue-900 p-1"
-        >
-        {{ toggle.name }}
-        </button>
-      </div>
-</div>
-
-    <div class="h-auto lg:h-48">
-      <div class="flex flex-wrap mt-4">
-        <div v-for="(item) in SkillsList" :key="item" class="text-blue-900 antialiased m-1 p-1 border border-blue-900">
-            {{ item }} 
-          </div>
       </div>
     </div>
 

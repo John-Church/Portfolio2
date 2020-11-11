@@ -8,9 +8,9 @@
       </nuxt-link>
       <ul class="flex items-center hidden space-x-8 lg:flex">
         <ul class="flex items-center hidden space-x-8 lg:flex">
-      <li><nuxt-link to="/experience" aria-label="Experience" title="Experience" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1">Experience</nuxt-link></li>
-      <li><nuxt-link to="/about" aria-label="About" title="About" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1">About Me</nuxt-link></li>
-      <li><nuxt-link to="/contact" aria-label="Contact" title="Contact" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1">Contact</nuxt-link></li>
+      <li><nuxt-link to="/experience" aria-label="Experience" title="Experience" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1 px-3">Experience</nuxt-link></li>
+      <li><nuxt-link to="/about" aria-label="About" title="About" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1 px-3">About Me</nuxt-link></li>
+      <li><nuxt-link to="/contact" aria-label="Contact" title="Contact" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1 px-3">Contact</nuxt-link></li>
     </ul>
       </ul>
       <div class="lg:hidden">
