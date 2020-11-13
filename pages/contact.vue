@@ -38,7 +38,7 @@ name="contact"
   </div>
   <div class="md:flex md:items-center">
     <div class="md:w-1/3">
-      <button class="shadow bg-blue-900 hover:bg-gray-400 focus:shadow-outline focus:outline-none text-white  py-2 px-4 rounded" type="button">
+      <button class="shadow bg-blue-900 hover:bg-gray-400 focus:shadow-outline focus:outline-none text-white  py-2 px-4 rounded" type="submit" value="Send Message">
         Send
       </button>
     </div>
