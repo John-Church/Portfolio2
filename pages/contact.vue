@@ -14,7 +14,7 @@ name="contact"
       <label class="block  tracking-wide text-blue-900 text-xs  mb-2" for="name">
         Name
       </label>
-      <input class="appearance-none focus:outline-none block w-full bg-gray-200 text-blue-900 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:bg-white" id="name" name="name" required type="text" placeholder="Jane">
+      <input class="appearance-none focus:outline-none block w-full bg-gray-200 text-blue-900 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:bg-white" id="name" name="name" required type="text">
     </div>
   </div>
   <div class="flex flex-wrap -mx-3 mb-6">
