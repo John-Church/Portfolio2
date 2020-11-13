@@ -11,19 +11,28 @@
             </svg>
           </button>
         </p>
-        <div class="border-blue-900 border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4 mb-2"></div>
       </div>
 
 
-      <transition>
+      <transition name="education">
         <div v-if="educationToggle">
           <div v-for="(item) in Education" :key="item" class="clear-left">
-              <p class="text-blue-900 antialiased text-lg mt-2 float-left font-bold">
-                {{ item.title }}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
+              <p class="text-blue-900 antialiased text-lg float-left font-bold">
+                {{ item.title }}<span class="hidden sm:inline-block">{{ ', ' + item.location }}</span>
               </p>
-              <p class="text-blue-900 antialiased italic mt-2 float-right">
-                {{ item.startDate + " " + item.endDate }}
-              </p>
+      
+              <div v-if='item.endDate'>
+                <p class="text-blue-900 antialiased italic clear-left sm:clear-none sm:inline-block lg:w-auto sm:float-right">
+                  {{ item.startDate + " - " + item.endDate }}
+                </p>
+              </div>
+              <div v-else>
+                <p class="text-blue-900 antialiased italic clear-left sm:clear-none sm:inline-block lg:w-auto sm:float-right">
+                  {{ item.startDate}}
+                </p>
+              </div>
+
               <p class="text-blue-900 antialiased italic clear-left text-sm">
                 {{ item.subscript }}
               </p>
@@ -40,16 +49,21 @@
       <div class="pt-4">  
         <p class="text-2xl text-blue-900 font-bold">
           Skills
+          <button @click="skillsToggle = !skillsToggle" class="relative p-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+              <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </p>
-        <div class="border-blue-900 border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4 mb-2"></div>
       </div>
-
+<div v-if="skillsToggle">
 <div class="flex flex-wrap">
       <div v-for="(toggle) in Toggles" :key='toggle.name'>
         <button 
         @click="toggle.value = !toggle.value" 
         :class="{ 'text-white bg-blue-900 border-blue-900': toggle.value}"
-        class="font-medium mr-2 tracking-wide transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-blue-900 border-b font-extralight border-blue-900 p-1 px-3"
+        class="font-medium text-sm mr-2 tracking-wide transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-blue-900 border-b font-extralight border-blue-900 p-1 px-2 lg:px-3 mb-1"
         >
         {{ toggle.name }}
         </button>
@@ -58,11 +72,12 @@
 
     <div class="h-auto">
       <div class="flex flex-wrap mt-4">
-        <div v-for="(item) in SkillsList" :key="item" class="text-blue-900 antialiased m-1 p-1 border border-blue-900">
+        <div v-for="(item) in SkillsList" :key="item" class="text-blue-900 text-sm antialiased m-1 p-1 border border-blue-900">
             {{ item }} 
           </div>
       </div>
     </div>
+</div>
 
       <div class="pt-4">  
         <p class="text-2xl text-blue-900 font-bold">
@@ -75,17 +90,28 @@
           </button>
         </span>
         </p>
-        <div class="border-blue-900 border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4 mb-2"></div>
       </div>
 
       <div v-if="experienceToggle">
       <div v-for="(item) in Experience" :key="item" class="clear-left">
-          <p class="text-blue-900 antialiased text-lg mt-2 float-left font-bold">
+          <p class="text-blue-900 antialiased text-lg float-left font-bold">
             {{ item.title}}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
           </p>
-          <p class="text-blue-900 antialiased italic mt-2 float-right">
-            {{ item.startDate + " " + item.endDate }}
-          </p>
+
+
+          <div v-if='item.endDate'>
+                <p class="text-blue-900 antialiased italic clear-left sm:clear-none sm:inline-block lg:w-auto sm:float-right">
+                  {{ item.startDate + " - " + item.endDate }}
+                </p>
+              </div>
+              <div v-else>
+                <p class="text-blue-900 antialiased italic clear-left sm:clear-none sm:inline-block lg:w-auto sm:float-right">
+                  {{ item.startDate}}
+                </p>
+              </div>
+
+
           <p class="text-blue-900 antialiased italic clear-left text-sm">
             {{ item.subscript }}
           </p>
@@ -115,17 +141,26 @@
           </button>
         </span>
         </p>
-        <div class="border-blue-900 border w-full pl-4"></div>
+        <div class="border-blue-900 border w-full pl-4 mb-2"></div>
       </div>
 
     <div v-if="leadershipToggle">
     <div v-for="(item) in Leadership" :key="item" class="clear-left">
-        <p class="text-blue-900 antialiased text-lg mt-2 float-left font-bold">
+        <p class="text-blue-900 antialiased text-lg float-left font-bold">
           {{ item.title}}<span class="hidden md:inline-block">{{ ', ' + item.location }}</span>
         </p>
-        <p class="text-blue-900 antialiased italic mt-2 float-right">
-          {{ item.startDate + " " + item.endDate }}
-        </p>
+
+        <div v-if='item.endDate'>
+                <p class="text-blue-900 antialiased italic clear-left sm:clear-none sm:inline-block lg:w-auto sm:float-right">
+                  {{ item.startDate + " - " + item.endDate }}
+                </p>
+              </div>
+              <div v-else>
+                <p class="text-blue-900 antialiased italic clear-left sm:clear-none sm:inline-block lg:w-auto sm:float-right">
+                  {{ item.startDate }}
+                </p>
+              </div>
+
         <p class="text-blue-900 antialiased italic clear-left text-sm">
           {{ item.subscript }}
         </p>
@@ -150,7 +185,7 @@ import nuxtConfig from '~/nuxt.config'
 export default {
   data() {
     return {
-    educationToggle: true,
+    educationToggle: false,
     Education: 
     [
       {
@@ -165,7 +200,7 @@ export default {
         ]
       },
     ],
-    experienceToggle: true,
+    experienceToggle: false,
     Experience: 
     [
       {
@@ -187,7 +222,7 @@ export default {
         location: 'Tampa, FL',
         startDate: 'July 2019',
         endDate: 'Present',
-        subscript: 'Part-Time Software Engineer',
+        subscript: 'Software Engineer',
         content: [
           'Advised CEO on technical viability of project goals and most cost-effective implementations',
           'Assisted in planning and implementation of backend PostgreSQL database for Django web app',
@@ -220,7 +255,7 @@ export default {
         location: 'Claremont, CA',
         startDate: 'August 2018',
         endDate: 'May 2019',
-        subscript: 'Residential technology Assistant',
+        subscript: 'Residential Technology Assistant',
         content: [
           'Responsible for reporting on and solving technical problems within one dorm at Claremont McKenna',
         ]
@@ -246,7 +281,7 @@ export default {
         ]
       },
     ],
-    leadershipToggle: true,
+    leadershipToggle: false,
     Leadership: 
     [
       {
@@ -277,7 +312,7 @@ export default {
         ]
       },
     ],
-
+  skillsToggle: false,
   Toggles:
     {
       // projectManagement: {
@@ -434,6 +469,24 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+
+.education-enter,
+.education-leave-to {
+  opacity: 0;
+}
+
+.education-enter-to,
+.education-leave {
+  opacity: 1;
+  
+}
+
+.education-enter-active,
+.education-leave-active {
+  transition: all 0.3s ease-out;
+  transform-origin: top center;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;

@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen">
 
-      <div class="antialiased text-blue-900 w-screen px-8 xl:w-2/3 mx-auto mt-16">
+      <div class="antialiased text-blue-900 w-screen px-8 xl:w-2/3 mt-8 mx-auto mt-2">
         <nuxt-content :document="intro" />
       </div>
 
