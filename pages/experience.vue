@@ -6,7 +6,7 @@
         <p class="text-2xl text-blue-900 font-bold">
           Education
           <button @click="educationToggle = !educationToggle" class="relative p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" :class="{'open': educationToggle}" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
               <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -15,7 +15,11 @@
       </div>
 
 
-      <transition name="education">
+      <!-- <transition
+      name="expand"
+      @enter="enter"
+      @after-enter="afterEnter"
+      @leave="leave"> -->
         <div v-if="educationToggle">
           <div v-for="(item) in Education" :key="item" class="clear-left">
               <p class="text-blue-900 antialiased text-lg float-left font-bold">
@@ -43,14 +47,14 @@
               </ul>
           </div>
         </div>
-      </transition>
+      <!-- </transition> -->
 
 
       <div class="pt-4">  
         <p class="text-2xl text-blue-900 font-bold">
           Skills
           <button @click="skillsToggle = !skillsToggle" class="relative p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" :class="{'open': skillsToggle}" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
               <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -84,7 +88,7 @@
           Experience
           <span>
           <button @click="experienceToggle = !experienceToggle" class="relative p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" :class="{'open': experienceToggle}" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
               <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -135,7 +139,7 @@
           Leadership
           <span>
           <button @click="leadershipToggle = !leadershipToggle" class="relative p-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" :class="{'open': leadershipToggle}" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
               <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -459,33 +463,75 @@ export default {
     },
   },
   methods: {
-  },
+      enter(el) {
+        // set the element to his natural hight
+        el.style.height = 'auto';
+        /*
+          get the calculated height.
+          getComputedStyle returns an object containing all the CSS properties 
+          of the element after all active styles have been loaded and the basic 
+          calculations have been performed.
+          We need the height after all basic calculations have been performed, 
+          then the height of each element here is dynamically, 
+          based on the number of items in the sublist.
+        */
+        const height = getComputedStyle(el).height;
+        // set the height to zero for the opening animation
+        el.style.height = 0;
+        /*
+          Force the repaint to make sure the animation is triggered correctly, 
+          then you can fire the method getComputedStyle again.
+          This is not necessary, but sometimes the animation may not start depending on the case.
+        */
+        getComputedStyle(el);
+        /*
+          Set the height from the element to the calculated height.
+          With setTimeout you make sure the browser has finished the painting 
+          after setting the height to zero.
+        */
+        setTimeout(() => {
+          el.style.height = height;
+        });        
+      },
+      afterEnter(el) {
+        el.style.height = 'auto';
+      },
+      leave(el) {
+        /*
+          Same as with the enter method, but only the other way around.
+        */
+        el.style.height = getComputedStyle(el).height;
+        
+        getComputedStyle(el);
+        setTimeout(() => {
+          el.style.height = 0;
+        });
+      }
+  }
 }
 </script>
 
-<style>
+<style scoped>
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
 
-.education-enter,
-.education-leave-to {
-  opacity: 0;
-}
+svg {
+  position: absolute;
+  transition: transform .2s ease-in-out
 
-.education-enter-to,
-.education-leave {
-  opacity: 1;
   
 }
-
-.education-enter-active,
-.education-leave-active {
-  transition: all 0.3s ease-out;
-  transform-origin: top center;
+.open {
+  transform: rotateZ(90deg);
 }
+
+  .expand-enter-active, .expand-leave-active {
+    transition: height .25s ease-in-out;
+    overflow: hidden;
+  }
 
 .container {
   margin: 0 auto;
