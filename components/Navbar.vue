@@ -38,7 +38,7 @@
       <div class="hidden sm:block">
         <ul class="flex items-center space-x-8">
         <li><nuxt-link to="/experience" aria-label="Experience" title="Experience" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1 px-2">Experience</nuxt-link></li>
-        <li><nuxt-link to="/about" aria-label="About" title="About" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1 px-2">About Me</nuxt-link></li>
+        <!-- <li><nuxt-link to="/about" aria-label="About" title="About" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1 px-2">About Me</nuxt-link></li> -->
         <li><nuxt-link to="/contact" aria-label="Contact" title="Contact" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border-b font-extralight border-blue-900 p-1 px-2">Contact</nuxt-link></li>
         </ul>
       </div>
@@ -58,7 +58,7 @@
    <transition name="dropdown">
     <div :class="isMenuOpen ? 'block' : 'hidden'" class="px-4 pt-2 pb-2 bg-gray-200">
         <nuxt-link to="/experience" aria-label="Experience" title="Experience" class="block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">Experience</nuxt-link>
-        <nuxt-link to="/about" aria-label="About" title="About" class="block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">About Me</nuxt-link>
+        <!-- <nuxt-link to="/about" aria-label="About" title="About" class="block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">About Me</nuxt-link> -->
         <nuxt-link to="/contact" aria-label="Contact" title="Contact" class="block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">Contact</nuxt-link>
     </div>
     </transition>
