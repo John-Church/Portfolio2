@@ -3,7 +3,7 @@
 
       
 
-      <div class="antialiased text-blue-900 w-screen px-8 xl:w-2/3 mt-8 mx-auto mt-2 bg-white mt-12">
+      <div class="antialiased text-blue-900 w-screen px-8 xl:w-2/3 mt-4 mx-auto bg-white sm:mt-12">
       <div class="sm:grid sm:grid-cols-2">
         <div class="hidden sm:block">
           <img class="overflow-auto rounded-full w-auto h-auto object-cover" src="/photos/_DSC2428.png" alt="">
