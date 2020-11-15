@@ -25,9 +25,9 @@
             </div>
         <div class="flex flex-wrap align-center justify-center mx-auto w-2/3">
           <div class="w-full sm:w-auto sm:mx-4 flex justify-center align-center"><nuxt-link to="/experience" aria-label="Experience" title="Experience" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border font-extralight border-blue-900 p-1 px-2 mb-4">My Experience</nuxt-link></div>
-          <div class="w-full sm:w-auto sm:mx-4 flex justify-center align-center">
+          <!-- <div class="w-full sm:w-auto sm:mx-4 flex justify-center align-center">
             <nuxt-link to="/about" aria-label="About" title="About" class="font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-white border font-extralight border-blue-900 p-1 px-2 mb-4">About Me</nuxt-link>
-          </div>  
+          </div>   -->
         </div> 
           </div>
         </div>

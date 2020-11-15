@@ -332,7 +332,7 @@ export default {
       //   },
       computerLanguages: {
         name: 'Computer Languages', 
-        value: true,
+        value: false,
         content:
         [
             'CSS',
@@ -346,7 +346,7 @@ export default {
         },
       frameworks: {
         name: 'Frameworks', 
-        value: true,
+        value: false,
         content:
         [
             'Bootstrap',
@@ -359,7 +359,7 @@ export default {
         },
       computerscience: {
         name: 'Computer Science', 
-        value: true,
+        value: false,
         content:
         [
             'Algorithms',
@@ -372,19 +372,19 @@ export default {
         },
       // frontend: {
       //   name: 'Frontend', 
-      //   value: true,
+      //   value: false,
       //   content:
       //   []
       //   },
       // backend: {
       //   name: 'Backend', 
-      //   value: true,
+      //   value: false,
       //   content:
       //   []
       //   },
       design: {
         name: 'Design', 
-        value: true,
+        value: false,
         content:
         [
             'InDesign',
@@ -395,7 +395,7 @@ export default {
         },
       languages: {
         name: 'Languages', 
-        value: true,
+        value: false,
         content:
         [
           'Arabic (MS, intermediate)',
@@ -406,7 +406,7 @@ export default {
         },
       softSkills: {
         name: 'Soft Skills', 
-        value: true,
+        value: false,
         content:
         [
             'Project Management',
@@ -415,7 +415,7 @@ export default {
         },
       misc: {
         name: 'Misc.', 
-        value: true,
+        value: false,
         content:
         [
             'Excel',
