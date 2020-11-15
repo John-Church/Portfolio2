@@ -4,14 +4,14 @@
       
 
       <div class="antialiased text-blue-900 w-screen px-8 xl:w-2/3 mt-8 mx-auto mt-2 bg-white mt-12">
-      <div class="grid grid-cols-2">
-        <div class="overflow-auto rounded-full w-full object-cover">
-          <img class="" src="/photos/_DSC2428.png" alt="">
+      <div class="sm:grid sm:grid-cols-2">
+        <div class="hidden sm:block">
+          <img class="overflow-auto rounded-full w-auto h-auto object-cover" src="/photos/_DSC2428.png" alt="">
         </div>
   
         <div class="flex flex-wrap justify-center content-center">
-          <div class="block h-auto m-8">
-            <div class="border-l-2 border-blue-900 pl-2 pt-2 pb-4 mb-4">
+          <div class="block h-auto sm:m-8">
+            <div class="sm:border-l-2 border-blue-900 sm:pl-2 pt-2 pb-4 mb-4">
               <div class="text-blue-900 text-2xl" >
                 Hello,
               </div>
