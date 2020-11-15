@@ -5,7 +5,7 @@
       <div>  
         <p class="text-2xl text-blue-900 font-bold">
           Education
-          <button @click="educationToggle = !educationToggle" class="relative p-1">
+          <button @click="educationToggle = !educationToggle" class="relative p-1 text-blue-900">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" :class="{'open': educationToggle}" class="stroke-current text-blue-900 h-5 w-5 absolute bottom-0">
               <path stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -62,7 +62,7 @@
         <div class="border-blue-900 border w-full pl-4 mb-2"></div>
       </div>
 <div v-if="skillsToggle">
-<div class="flex flex-wrap">
+<div class="hidden md:flex md:flex-wrap">
       <div v-for="(toggle) in Toggles" :key='toggle.name'>
         <button 
         @click="toggle.value = !toggle.value" 
@@ -174,6 +174,11 @@
           </li>
         </ul>
       </div>
+    </div>
+
+    <div class="mt-12 w-full">
+      <a href="/John Church Resume 2020.pdf" download="John Church Resume" class="float-right font-medium tracking-wide text-blue-900 transition-colors duration-200 
+      hover:bg-blue-900 hover:text-white hover:border-white border font-extralight border-blue-900 p-1 px-2 mb-4">Download My Resume</a>
     </div>
 
     </div>
@@ -520,7 +525,8 @@ export default {
 
 svg {
   position: absolute;
-  transition: transform .2s ease-in-out
+  transition: transform .5s ease-in-out;
+  stroke: #2a4365 !important;
 
   
 }
