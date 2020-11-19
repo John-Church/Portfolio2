@@ -67,7 +67,7 @@
         <button 
         @click="toggle.value = !toggle.value" 
         :class="{ 'text-white bg-blue-900 border-blue-900': toggle.value}"
-        class="font-medium text-sm mr-2 tracking-wide transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-blue-900 border-b font-extralight border-blue-900 p-1 px-2 lg:px-3 mb-1"
+        class="font-medium text-sm mr-2 tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white hover:border-blue-900 border-b font-extralight border-blue-900 p-1 px-2 lg:px-3 mb-1"
         >
         {{ toggle.name }}
         </button>
