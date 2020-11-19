@@ -198,7 +198,7 @@ export default {
     Education: 
     [
       {
-        title: 'Claremont Mckenna College',
+        title: 'Claremont McKenna College',
         location: 'Claremont, CA',
         startDate: 'May 2021',
         endDate: 'May 2020',

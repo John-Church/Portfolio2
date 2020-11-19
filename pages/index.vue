@@ -20,7 +20,7 @@
                 Thanks for stopping by! My name is John Church. I'm a student graduating from Claremont Mckenna College this spring. 
               </div>
               <div class="text-blue-900" >
-                During my time in college I have studied computer science, philosophy, French, and Arabic. I have been the 
+                During my time in college, I have studied computer science, philosophy, French, and Arabic. I have been the 
                 Director of Internal Affairs on the top model UN team on the West Coast, the executive officer for a newspaper, and the principal developer for a real estate fintech startup. In short, I believe that the best education is an interdisciplinary one. I bring a wide variety of experiences and skills to any project that I work on. 
               </div>
             </div>
