@@ -4,22 +4,14 @@
 <div id="exploration" class="h-72">
   <div class="w-2/3 mx-auto mt-4 bg-white px-4 sm:mt-16">
   <div class="">
-    
       <div>  
           <p class="text-2xl text-blue-900 font-bold">
             Exploration
           </p>
           <div class="border-blue-900 border w-full pl-4 mb-2"></div>
         </div>
-
       <img src="/photos/508791A7-0871-4ECE-A31C-4B51C28EAC2A_1_105_c.jpeg" alt="">
-
-
   </div> 
-
-
-
-
 </div>
 
 
