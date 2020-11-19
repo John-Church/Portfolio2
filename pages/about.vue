@@ -8,7 +8,7 @@
           <p class="text-2xl text-blue-900 font-bold">
           </p>
           <div class="border-blue-900 border w-full pl-4 my-2 text-blue-900"></div>
-        I'm a student from Claremont Mckenna College in Southern California who loves hiking, hard problems, and getting lost in interesting places.
+        <p class="text-blue-900">I'm a student from Claremont McKenna College in Southern California who loves hiking, hard problems, and getting lost in interesting places.</p>
           <div class="border-blue-900 border w-full pl-4 my-2"></div>
         
         </div>
@@ -16,7 +16,7 @@
           <div class="w-full pl-4 my-2 mt-4"></div>
           <div class="px-4 pt-2 pb-2">
           <div class="flex flex-wrap align-middle">
-            <p class="text-blue-900 font-medium pt-1">Tell me a bit more about...</p>
+            <p class="text-blue-900 font-medium pt-1 clear-right sm:clear-none">Tell me a bit more about...</p>
           <button @click="academics = !academics, me = false, work = false" type="button" class="m-1 sm:my-0 sm:mx-2 border-blue-900 border inline-block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">
             <p class="float-left">Academics</p>
             </button>
@@ -145,42 +145,4 @@ export default {
   transform-origin: top center;
 }
 
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>

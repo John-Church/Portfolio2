@@ -17,7 +17,7 @@
                 Hello,
               </div>
               <div class="text-blue-900 mb-4" >
-                Thanks for stopping by! My name is John Church. I'm a student graduating from Claremont Mckenna College this spring. 
+                <p class="">Thanks for stopping by! My name is John Church. I'm a student graduating from Claremont McKenna College this spring. </p>
               </div>
               <div class="text-blue-900" >
                 During my time in college, I have studied computer science, philosophy, French, and Arabic. I have been the 
@@ -97,13 +97,6 @@ export default {
 }
 .layout-enter, .layout-leave-active {
   opacity: 0
-}
-
-.stripes {
-  background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232a4365' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-/* background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%232a4365' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E"); */
 }
 
 </style>
