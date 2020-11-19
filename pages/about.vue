@@ -16,14 +16,14 @@
           <div class="w-full pl-4 my-2 mt-4"></div>
           <div class="px-4 pt-2 pb-2">
           <div class="flex flex-wrap align-middle">
-            <p class="text-blue-900 font-medium">Tell me a bit more about...</p>
-          <button @click="academics = !academics, me = false, work = false" type="button" class="border-blue-900 border inline-block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">
+            <p class="text-blue-900 font-medium pt-1">Tell me a bit more about...</p>
+          <button @click="academics = !academics, me = false, work = false" type="button" class="mx-2 border-blue-900 border inline-block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">
             <p class="float-left">Academics</p>
             </button>
-          <button @click="work = !work, academics = false, me = false" type="button" class="border-blue-900 border inline-block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">
+          <button @click="work = !work, academics = false, me = false" type="button" class="mx-2 border-blue-900 border inline-block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">
             <p class="float-left">Work</p>
             </button>
-          <button @click="me = !me, academics = false, work = false" type="button" class="border-blue-900 border inline-block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">
+          <button @click="me = !me, academics = false, work = false" type="button" class="mx-2 border-blue-900 border inline-block font-medium tracking-wide text-blue-900 transition-colors duration-200 hover:bg-blue-900 hover:text-white font-extralight border-blue-900 p-1">
             <p class="float-left">Yourself</p>
             </button>
           </div>
