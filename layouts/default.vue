@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white h-full min-h-screen">
+  <div class="h-full min-h-screen">
     <Navbar></Navbar>
     <Nuxt />
   </div>
@@ -15,6 +15,10 @@
 .page-enter,
 .page-leave-to {
   opacity: 0;
+}
+
+.indent {
+  text-indent: 2em;
 }
 
 /* 
